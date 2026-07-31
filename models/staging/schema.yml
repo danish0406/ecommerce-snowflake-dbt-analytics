@@ -1,0 +1,39 @@
+version: 1
+
+sources:
+  - name: raw_data
+    database: ECOMMERCE_DB
+    schema: RAW
+    tables:
+      - name: RAW_CUSTOMERS
+      - name: RAW_ORDERS
+      - name: RAW_PRODUCTS
+      - name: RAW_ORDER_DETAILS
+
+models:
+  - name: stg_customers
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_products
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_orders_items
+    columns:
+      - name: order_id
+        tests:
+          - not_null
