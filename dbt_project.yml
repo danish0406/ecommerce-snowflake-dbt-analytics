@@ -1,0 +1,32 @@
+# Name of your dbt project (in snake_case)
+name: 'ecommerce_analytics'
+version: '1.0.0'
+config-version: 2
+
+# Profile connecting dbt to Snowflake
+profile: 'default'
+
+# Directories where dbt will search for files
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Configuring model materializations
+models:
+  ecommerce_analytics:
+    # Staging Layer Configuration
+    staging:
+      +materialized: view      # Staging models will be created as Snowflake VIEWS
+      +schema: staging         # Optional: organizes staging into ANALYTICS_STAGING
+      
+    # Marts Layer Configuration (Star Schema)
+    marts:
+      +materialized: table     # Marts models will be created as Snowflake TABLES
+      +schema: analytics       # Ensures final star schema lands in the ANALYTICS schema
