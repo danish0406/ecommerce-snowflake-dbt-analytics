@@ -17,7 +17,8 @@ Engineered an end-to-end cloud data warehouse using **Snowflake** and **dbt Clou
 ## 📊 Data Lineage Graph (dbt DAG)
 Modular data architecture tracing dependencies from raw landing tables to final dimension and fact marts:
 
-![dbt DAG Lineage](<img width="1501" height="602" alt="DAG diagram" src="https://github.com/user-attachments/assets/c66776e6-5704-48de-99dc-2292ee3ec199" />
+![dbt DAG Lineage](
+<img width="1501" height="602" alt="DAG diagram" src="https://github.com/user-attachments/assets/2280708d-c7b1-4586-8e18-4da3594c0757" />
 )
 
 ---
@@ -25,7 +26,8 @@ Modular data architecture tracing dependencies from raw landing tables to final 
 ## 🧪 Data Quality & Automated Testing
 Implemented automated schema testing across primary keys, foreign key constraints, and required attributes:
 
-![dbt Test Results](<img width="1501" height="555" alt="test" src="https://github.com/user-attachments/assets/44200993-c1c5-425c-804d-e2c4a9c68d13" />
+![dbt Test Results](
+<img width="1501" height="555" alt="test" src="https://github.com/user-attachments/assets/5c963d3c-ee31-436a-9914-591795f763d3" />
 )
 
 ---
